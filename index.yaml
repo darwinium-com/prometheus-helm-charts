@@ -19921,6 +19921,61 @@ entries:
           url: https://github.com/prometheus/prometheus
     apiVersion: v2
     appVersion: v2.41.0
+    created: "2023-03-22T05:45:59.119172184Z"
+    dependencies:
+    - condition: alertmanager.enabled
+      name: alertmanager
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 0.24.*
+    - condition: kube-state-metrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.30.*
+    - condition: prometheus-node-exporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.8.*
+    - condition: prometheus-pushgateway.enabled
+      name: prometheus-pushgateway
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 2.0.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: f63f52a640a3e875588cf3503971bb1a825fc4cd057d5872371215206314a41f
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - monitoring
+    - prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    type: application
+    urls:
+    - https://github.com/darwinium-com/prometheus-helm-charts/releases/download/prometheus-20.0.1/prometheus-20.0.1.tgz
+    version: 20.0.1
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus/prometheus
+    apiVersion: v2
+    appVersion: v2.41.0
     created: "2023-03-21T06:23:02.206785187Z"
     dependencies:
     - condition: alertmanager.enabled
@@ -50663,6 +50718,27 @@ entries:
   prometheus-rabbitmq-exporter:
   - apiVersion: v1
     appVersion: v0.29.0
+    created: "2023-03-22T05:45:59.288272949Z"
+    description: Rabbitmq metrics exporter for prometheus
+    digest: f358063d368ffc31b371cfe9b907a2d8d36b57ea259a1fffcb7652b83ec96111
+    home: https://github.com/kbudde/rabbitmq_exporter
+    maintainers:
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    - email: abhishekbhardwaj510@gmail.com
+      name: iamabhishek-dubey
+    - email: juan.chimienti@gmail.com
+      name: juanchimienti
+    - email: monotek23@gmail.com
+      name: monotek
+    name: prometheus-rabbitmq-exporter
+    sources:
+    - https://github.com/kbudde/rabbitmq_exporter
+    urls:
+    - https://github.com/darwinium-com/prometheus-helm-charts/releases/download/prometheus-rabbitmq-exporter-1.5.0/prometheus-rabbitmq-exporter-1.5.0.tgz
+    version: 1.5.0
+  - apiVersion: v1
+    appVersion: v0.29.0
     created: "2023-01-30T12:48:13.931957752Z"
     description: Rabbitmq metrics exporter for prometheus
     digest: cf0a0c25c00a737ffe7559b06c5787ded0b07fcf92bf45759eb16fe1d3f64d2a
@@ -53019,4 +53095,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-21T06:23:04.305990806Z"
+generated: "2023-03-22T05:45:59.291437339Z"
